@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Curriculum Vitae</title>
+</head>
+<body>
+
+	<p>
+		<img src="./pic/Io.jpeg" />
+	</p>
+
+	<h1>Informazioni personali</h1>
+	<h3>Nome: Federica</h3>
+	<h3>Cognome: Cosenza</h3>
+	<h3>Residenza: Via Torrente Reginella cpl Bellaria sn</h3>
+	<h3>Domicilio: Via Giovanni Antonio Amadeo, 24</h3>
+	<h3>Mail: federica.cosenza92@gmail.com</h3>
+	<h3>Tel: 3405030139</h3>
+	<h3>
+		Linkedin:
+		<p>
+			<a href="https://it.linkedin.com/in/federica-cosenza-315975b3"></a>
+		</p>
+
+
+	</h3>
+
+	<hr />
+
+
+	<h1>Esperienze lavorative:</h1>
+	<ul>
+		<li><b>dal 22 Luglio 2019 al 15 Settembre 2019:</b> <br>
+			Stagista presso Accenture Technology Solution</li>
+		<li><b>da Febbraio 2018 a Luglio 2018:</b> <br>Collaborazione
+			150h presso Politecnico di Milano</li>
+		<li><b>da Febbraio 2017 a Luglio 2017:</b> <br>Collaborazione
+			150h presso Politecnico di Milano</li>
+		<li><b>da Febbraio 2016 a Luglio 2016:</b> <br>Collaborazione
+			150h presso Politecnico di Milano</li>
+		<li><b>da Settembre 2015 a Dicembre 2015:</b> <br>Collaborazione
+			150h presso Politecnico di Milano</li>
+	</ul>
+
+	<hr />
+
+	<h1>Formazione</h1>
+	<ul>
+		<li><b>da Settembre 2014 a Settembre 2019:</b> <br> Laurea
+			in Ingegneria per l'Ambiente e il Territorio</li>
+		<li><b>da Settembre 2006 a Luglio 2011:</b> <br> Diploma
+			Liceo Scientifico</li>
+	</ul>
+
+	<hr />
+
+	<h1>Conoscenze informatiche</h1>
+
+	<table>
+		<tr>
+			<th></th>
+			<th scope="col">Java</th>
+			<th scope="col">SQL</th>
+			<th scope="col">PL-SQL</th>
+			<th scope="col">HTML</th>
+		</tr>
+		<tr>
+			<th scope="row">Livello</th>
+			<td>Principiante</td>
+			<td>Intermedio</td>
+			<td>Principiante</td>
+			<td>Intermedio</td>
+		</tr>
+
+	</table>
+
+	<hr />
+
+	<h1>Conoscenze linguistiche</h1>
+
+	<table>
+		<tr>
+			<th></th>
+			<th scope="col">Italiano</th>
+			<th scope="col">Inglese</th>
+			<th scope="col">Portoghese</th>
+
+		</tr>
+		<tr>
+			<th scope="row">Livello</th>
+			<td>Madrelingua</td>
+			<td>Intermedio</td>
+			<td>Principiante</td>
+		</tr>
+
+	</table>
+
+	<hr />
+
+	<h1>Contatto diretto</h1>
+
+	<form action="/contact" method="get">
+		<div>
+			Azienda: <input type="text" name="azienda" placeholder="Inserisci il nome dell'azienda qui." />
+		</div> 
+		<br>
+		<div>
+			Lavoro per cui ti contattiamo: <input type="text" name="b"
+				placeholder="Inserisci il lavoro qui." />
+		</div>
+		<br>
+		<div>
+			Descrizione del lavoro:<br />
+			<textarea name="description">Inserisci qui la descrizione del lavoro.</textarea>
+		</div>
+		<br>
+		<div> Che tipo di contratto?
+            <select name="contratto">
+                <option value="determinato" selected>Contratto a tempo determinato</option>
+                <option value="indeterminato" selected>Contratto a tempo indeterminato</option>
+                <option value="progeto" selected>Contratto a progetto</option>
+                <option value="part-time">Contratto part-time</option>
+            </select>
+		</div>
+		<br>
+		<div>
+			RAL: <input type="text" name="ral"
+				placeholder="Inserisci la RAL qui." />
+		</div>
+		<br>
+		<div>
+            <fieldset>
+                <legend>Recapito</legend>
+                <label>Nome: <input type="text" name="fnome" /></label>
+                <label>Cognome: <input type="text" name="cnome" /></label>
+                <label>Telefono: <input type="text" name="tnome" /></label>
+            </fieldset>
+        </div>
+		<br>
+		<div>
+			Disponibilità: <input type="radio" id="cittàM" name="città"
+				value="Milano" checked /> <label for="cittàM">Milano</label> <input
+				type="radio" id="cittàR" name="città" value="Roma" /> <label
+				for="cittàR">Roma</label> <input type="radio" id="cittàME"
+				name="città" value="Messina" /> <label for="cittàME">Messina</label>
+		</div>
+		<br>
+		<div>
+			Trasferte in Italia: <input type="radio" id="Sì" name="posneg"
+				value="Sì" checked /> <label for="Sì">Sì</label> <input
+				type="radio" id="NO" name="posneg" value="No" /> <label
+				for="NO">No</label>
+		</div>
+		<br>
+		<div>
+			Trasferte all'estero: <input type="radio" id="Sì1" name="posneg"
+				value="Sì" checked /> <label for="Sì1">Sì</label> <input
+				type="radio" id="NO1" name="posneg" value="No" /> <label
+				for="NO1">No</label>
+		</div>
+		
+		<div>
+            Trasferte all'estero: <input type="checkbox" id="Sì" name="Sì" value="Sì" checked />
+            <label for="Sì">Sì</label>
+            <input type="checkbox" id="No" name="No" value="No" checked />
+            <label for="No">No</label>
+            
+        </div>
+		
+		<br>
+		<div>
+			<input type="hidden" name="invisible" value="notShowed" />
+		</div>
+		<br>
+		<div>
+			Data entro cui rispondere: <input type="date" name="data" />
+		</div>
+		<br>
+		<div>
+			Altre informazioni:<br />
+			<textarea name="comment">Inserisci qui ulteriori informazioni.</textarea>
+		</div>
+		<br>
+		<div>
+			<!-- compare it against the button element -->
+			<input type="submit" value="Invia" />
+		</div>
+	</form>
+
+</body>
+</html>
