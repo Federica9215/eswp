@@ -12,12 +12,21 @@
 
     <textarea id="target" rows="20" cols="80"></textarea>
     <div>
-        <button onclick="getText();">Get text</button>
+        <button onclick="getText();">Get text</button> 
         <button onclick="getTextDetailed();">Get text w/ details</button>
     </div>
 
     <script type="text/javascript">
-        function callback() {
+    /**descrizione callback -> try-catch nn c'è il tipo eccezione. 
+    ready= stato dell oggetto XHR che mi viene settato dalla risposta 
+    che è arrivata dal server. Se lo stato è opened, scrivo qlks. 
+    mi interessa qnd lo stato è DONE e quindi sign che la risposta è davvero arrivata 
+    se lo stato è diverso da 200, allora qlks è andato a male. 
+    tipicamente il 404 sign che nn ho trovato la risorsa. 
+    La cosa fondamentale è la riga target.value += this.responseText; -> sto cercando di leggere un file in formato semplice
+    xkè this fa riferimento all'oggetto corrente XHR? callback è stata associata ad una proprietà dell oggetto request, che a sua volta è un oggetto di XHR
+    **/
+        function callback() { 
             let target = document.getElementById('target');
 
         	try {
@@ -54,16 +63,16 @@
 
         function getTextDetailed() {
             let request = new XMLHttpRequest();
-            request.onreadystatechange = callback;
+            request.onreadystatechange = callback; /** onreadystatechange=mi viene chiamata nn sl qnd arriva la risposta dal server ma ad ogni passo intermedio  **/
             request.open("GET", "/eswp/s45.txt");
             request.send();
         }
 
         function getText() {
             let request = new XMLHttpRequest();
-            request.onload = callback;
-            request.open("GET", "/eswp/s45.txt");
-            request.send();
+            request.onload = callback; /** onload=proprietà di request, proprietà pubblica  **/
+            request.open("GET", "/eswp/s45.txt"); /** nella open specifico come primo parametro il metodo, secondi parametri e alla fine il parametro che richiedo al server  **/
+            request.send();/**manda la richiesta al server. il server legge s45 e mi ritorna una response. la response arriverà a callback xkè l oggetto request che ho creato si chiama così  **/
         }
     </script>
 </body>
