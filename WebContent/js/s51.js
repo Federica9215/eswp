@@ -41,14 +41,33 @@ $(function() {
 
     $('#upsize').click(function() {
         let msg = $('#msg3');
-        let cur = parseInt(msg.css('font-size'));
+        let cur = parseInt(msg.css('font-size')); //parseInt -> converte in un num intero
         msg.css('font-size', cur * 2);
     });
 
     $('#downsize').click(function() {
         let msg = $('#msg3');
         let cur = parseInt(msg.css('font-size'));
-        msg.css('font-size', cur > 1 ? cur / 2 : 1);
+        msg.css('font-size', cur > 1 ? cur / 2 : 1); // se è 
     });
+    
+    $('#random').click(function() {
+        let result = Math.floor((Math.random() * 6) + 1);
+        $('#flower').prop('src', './pic/' + result + '.jpeg');
+        $('#rn').val(result);
+        
+        
+        let n;
+        if(result>3){
+        	if(result=1){}
+        	n= $("<p>Win</p>").css({color: 'green'}).appendTo('#result');
+        }else {
+        	n= $("<p>Lost</p>").css({color: 'red'}).appendTo('#result');
+        }
+        
+    });
+    
+    
+    
 
 });
